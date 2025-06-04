@@ -1,0 +1,312 @@
+/* Importação da fonte Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #28a745; /* Verde vibrante */
+    --secondary-color: #0056b3; /* Azul escuro para detalhes */
+    --text-color: #333;
+    --light-text-color: #666;
+    --background-light: #f8f9fa;
+    --background-dark: #e9ecef;
+    --white: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin: 0;
+    flex-shrink: 0; /* Evita que o título encolha */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os links quebrem linha */
+    justify-content: center; /* Centraliza links em telas menores */
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x600/28a745/ffffff?text=Campo+Conectado') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+#hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px var(--shadow);
+}
+
+#hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #003f8e;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.content-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.highlight-section {
+    background-color: var(--background-dark);
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+.benefit-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    font-size: 1em;
+    color: var(--light-text-color);
+    margin: 0; /* Override content-section p margin */
+}
+
+/* Tech List */
+.tech-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.tech-item {
+    text-align: center;
+    width: 200px; /* Largura fixa para cada item */
+}
+
+.tech-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.tech-item h4 {
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.tech-item p {
+    font-size: 0.95em;
+    color: var(--light-text-color);
+    margin: 0; /* Override content-section p margin */
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links a {
+    margin-left: 15px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 15px;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-direction: column; /* Links da navegação empilhados */
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.1em;
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .tech-list {
+        flex-direction: column; /* Itens de tecnologia empilhados */
+        align-items: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .social-links {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 60px 0;
+        min-height: 400px;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
